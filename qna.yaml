@@ -1,0 +1,159 @@
+version: 2
+task_description: 'Teach the model the capabilities and features of the watsonx platform'
+created_by: juliadenham
+domain: technology
+seed_examples:
+  - question: How does the platform provide a common interface for managing the onboarding of users?
+    answer: |
+      Yes. Users can be on-boarded via an easy to use GUI.
+  - question: |
+      Can you explain how the platforms interface connects
+      with monitoring and observability tools to address overall platform health?
+    answer: |
+      Yes. Users can see performance metrics.
+  - question: What APIs and SDKs are available for use with the platform?
+    answer: |
+      Yes. The platform provides an SDK and API's for prompt engineering and for text generation.
+      The API and SDK can be used to integrate with applications such as conversational AI and RAG sources.
+  - question: How does the platform integrate into a multi-cloud environment?
+    answer: |
+      Yes. The watsonx platform is able to integrate with other cloud environments. Models can be trained
+      with data in other cloud environments. Models can be monitored with watsonx.governance
+      even if deployed on other cloud environments.
+  - question: How does the platform allocate processing, storage, and feature costs to the users?
+    answer: |
+      Yes. Costs can be calculated down to the services and group/user level.
+  - question: Do you have a governing body to oversee and manage information security risk within the organisation?
+    answer: |
+      https://www.ibm.com/support/pages/ibm-enterprise-it-security
+  - question: |
+      Do you have a formally appointed Chief Information Security Officer (CISO) or equivalent role, with associated
+      responsibilities clearly defined?
+    answer: |
+      https://www.ibm.com/support/pages/ibm-enterprise-it-security
+  - question: Do you have a documented and approved Information Security Strategy?
+    answer: |
+      IBM Data Security and Privacy Principles (DSP), at http://www.ibm.com/cloud/data-security, apply for standard IBM
+      Cloud Services that are generally available. provide further detail.
+  - question: Do you have a documented and approved Information Security Policy?
+    answer: |
+      IBM Data Security and Privacy Principles (DSP), at http://www.ibm.com/cloud/data-security, apply for standard IBM
+      Cloud Services that are generally available.
+  - question: |
+      Has the Supplier/Third Party established governance procedures to identify and mitigate privacy risk
+      including compliance risks relating to data privacy legislation and regulations?
+    answer: |
+      https://www.ibm.com/us-en/privacy
+  - question: Are employees subject to screening prior to employment?
+    answer: |
+      IBM's HR processes are set up to screen potential employees.
+  - question: |
+      Are employees, agents and subcontractors subjected to confidentiality requirements and are those requirements
+      enforced(e.g through contracts)?
+    answer: |
+      IBM's HR processes are set up to screen potential employees.
+  - question: |
+      If personal information is received from a Supplier or Third Party, can evidence of consent or another lawful
+      justification (as per section 11 of POPIA) be provided to FirstRand by the Supplier or Third Party?
+    answer: |
+      Personal information IBM has and uses would be adressed in the link above. PI on IBM Cloud would be Company's
+      responsibility.
+  - question: |
+      Analysis of technical vulnerabilities of the product, and remediating all the critical vulnerabilities prior to
+      their release to production.
+    answer: |
+      All involved parts of the solution are scanned regularly for known vulnerabilities, using multiple third-party
+      scanning tools. Each of the Critical and High vulnerabilities are analyzed and assessed. Those that are assessed
+      to have an impact are fixed. All released software parts are free of critical or high.
+  - question: How often is scanning performed?
+    answer: |
+      All involved parts of the solution are scanned for new vulnerabilities daily.
+  - question: Does IBM perform independent Pen Tests before publishing to production?
+    answer: |
+      Penetration tests on IBM Cloud on which watsonx.ai aaS is hosted & more are done regularly as mentioned here:
+      https://cloud.ibm.com/docs/overview?topic=overview-security. Critical and high vulnerabilities are addressed
+      before releasing.
+  - question: How are vulnerabilities remediated?
+    answer: |
+      Vulnerabilities identified as a result of technical vulnerability tests and / or penetration tests must be
+      remedied based on the following parameters: * Emergency: As soon as possible * Critical: 30 days * Medium:
+      90 days * Low: With a risk-based approach Emergency vulnerabilities are handled as quickly as possible via an
+      exception process. Both critical and major vulnerabilities are resolved within a week. Medium vulnerabilities
+      are remediated within 90 days, low vulnerabilities are addressed based on the risk they pose.
+  - question: How often are security patches made available.
+    answer: |
+      New security patches available must be checked at least once a week. Vulnerability scanning happens daily, with
+      CVE libraries within the scanners updated continuously.
+  - question: Does the product/platform provide an easy to use integrated Model Registry?
+    answer: |
+      We deliver models through docker registry.
+  - question: Does the Model Registry have any restrictions on Model size & parameters?
+    answer: |
+      The watsonx model registry has no parameter limitation and can support multiple foundation model architectures
+      and models of any size & parameters.
+  - question: How efficient/fast/robust is the Ingress / Egress to Model registry?
+    answer: |
+      Nginx is used for ingress and openshift routes are used as a passthrough, the settings are robust and throughput
+      testing is regularly performed to check for bottlenecks.
+  - question: What are different Model Metadata capturing supported?
+    answer: |
+      For each foundation model on watsonx, users have access to its metadata, which may include: model parameter size,
+      model type, languages supported, links to model provider's model card and Github repo, infrastructure
+      requirements and usage guidance, intended vs unintended use cases, training data, performance benchmarks,
+      environmental impact from training, and exposure to potential ethical/hateful content.
+  - question: Does the Registry provide Model Versioning?
+    answer: |
+      Yes.
+  - question: Does Watsonx have an Automated model training (autoML)?
+    answer: |
+      Watsonx has an Auto AI feature with a graphical interface that analyzes data and uses algorithms,
+      transformations, and parameter settings to create the best predictive model. AutoAI displays various potential
+      models as model candidate pipelines and ranks them on a leaderboard for selection.
+  - question: Does Watsonx have an Workflow templates?
+    answer: |
+      Watsonx includes out-of-the-box workflows that users can use or they can easily build one through a drag-and-drop
+      interface based on their needs. In addition to workflows, watsonx also includes capabilities to document and
+      track issues associated with models in a single place.
+  - question: Does Watsonx have ML Model experiment tracking (enterprise-wide)?
+    answer: |
+      ML models along with different versions of the model can be tracked for build, validation, and training in a
+      lifecycle view. Users can capture multiple experiments as “runs” and show them in notebooks programmatically.
+  - question: Does Watsonx uses Proprietary ML algorithms?
+    answer: |
+      Watsonx has a visual data modeler that can leverage proprietary algorithms pertaining to time series analysis.
+      Also, there are proprietary algorithms used to develop the IBM Slate embedding model. The underlying Watson NLP
+      library used by watsonx platform has several algorithms implemented by IBM Research. Examples include: sentiment
+      target extraction, entity extraction, NLP primitives (parts of speech, dependency parsing). In addition, some of
+      the CPU-only optimizations, and the inclusion of SVM algorithms optimized for parallelism (through SnapML
+      library, which Watson NLP relies on as a multi-cpu and gpu-based parallel implementation of scikit learn).
+      Learn more about IBM Research and innovation here:
+      https://pages.github.ibm.com/ai-foundation/watson-nlp-documentation/research_papers.html
+  - question: Does Watsonx integrates with open-source ML algorithms / frameworks?
+    answer: |
+      Watsonx notebooks and Auto AI can integrate with any number of open-source algorithms and frameworks.
+  - question: Does the product provide out of the box Frontend development tools?
+    answer: |
+      Yes.
+  - question: |
+      Do you consider it easy to use the UI for frontend development tools? Can it be done by someone who is not a
+      Data Scientist?
+    answer: |
+      Yes, the user interface (UI) throughout watsonx is designed using IBM’s Design Thinking process to ensure the UI
+      is intuitive and able to be used by many personas - everyone from an expert data scientist, app developer,
+      business analyst, line of business owner, etc. can use the platform. We also have several tools to automate
+      complex tasks such as autoAI to develop machine learning models with a few clicks.
+  - question: Which Frontend programming languages are supported?
+    answer: |
+      R.
+  - question: Which Frontend programming tools are supported? (Vercel, Streamlit, etc.)
+    answer: |
+      RStudio (saas and software), Rshiny Apps (for software).
+  - question: Does the product provide any reusable development frameworks?
+    answer: |
+      Yes.
+document:
+  repo: https://github.com/juliadenham/watsonx_knowledge.git
+  commit: e1744af
+  patterns:
+    - watsonx_capabilities.md
+
