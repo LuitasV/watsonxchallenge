@@ -152,8 +152,7 @@ seed_examples:
     answer: |
       Yes.
 document:
-  repo: https://github.com/juliadenham/watsonx_knowledge.git
-  commit: e1744af
+  repo: https://github.com/LuitasV/watsonxchallenge.git
+  commit: 8938aee
   patterns:
-    - watsonx_capabilities.md
-
+    - RFI_watsonx.md
