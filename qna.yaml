@@ -1,6 +1,6 @@
 version: 2
 task_description: 'Teach the model the capabilities and features of the watsonx platform'
-created_by: juliadenham
+created_by: spain-instructlab-challenge
 domain: technology
 seed_examples:
   - question: How does the platform provide a common interface for managing the onboarding of users?
@@ -153,6 +153,14 @@ seed_examples:
       Yes.
 document:
   repo: https://github.com/LuitasV/watsonxchallenge.git
-  commit: 8938aee
+  commit: db9e558
   patterns:
-    - RFI_watsonx.md
+    - development.md
+    - inference_generate_and_optimize.md
+    - ml_models_and_cap.md
+    - models.md
+    - platform_and_security.md
+    - privacy.md
+    - product_dev_and_delivery.md
+    - prompt_management.md
+    - security_governance.md
